@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="qingcheng_interface" />
+        <module name="qingcheng_web_manager" />
+        <module name="qingcheng_common" />
+        <module name="qingcheng-parent" />
+        <module name="qingcheng_common_web" />
+        <module name="qingcheng_service_goods" />
+        <module name="qingcheng_common_service" />
+        <module name="qingcheng" />
+        <module name="qingcheng_pojo" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="qingcheng" options="-parameters" />
+      <module name="qingcheng_common" options="-parameters" />
+      <module name="qingcheng_common_service" options="-parameters" />
+      <module name="qingcheng_common_web" options="-parameters" />
+      <module name="qingcheng_interface" options="-parameters" />
+      <module name="qingcheng_pojo" options="-parameters" />
+      <module name="qingcheng_service_goods" options="-parameters" />
+      <module name="qingcheng_web_manager" options="-parameters" />
+    </option>
+  </component>
+</project>

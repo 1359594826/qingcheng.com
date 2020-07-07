@@ -1,0 +1,28 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: web_managger
+  datasource:
+    druid:
+      min-idle: 5
+      max-active: 5
+      initial-size: 5
+      time-between-eviction-runs-millis: 60000        # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      password: xiong123
+      username: root
+      url: jdbc:mysql://localhost:3306/qingcheng_goods?useUnicode=true&characterEncoding=UTF-8
+      driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+  pagehelper:
+    helper-dialect: mysql   #数据库连接
+    reasonable: true        #分页合理化参数
+  devtools:           #热部署
+    restart:
+      enabled: true  #设置开启热部署
+      additional-paths: src/main/java #重启目录
+      exclude: WEB-INF/**
+    freemarker:
+      cache: false    #页面不加载缓存，修改即时生效
