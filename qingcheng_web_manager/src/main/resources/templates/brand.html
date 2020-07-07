@@ -18,6 +18,7 @@
         <el-button type="primay" @cilck="fetchData()">查询</el-button>
     </el-form>
     <el-table :data="tableData"
+              border
               style="width: 100%">
         <el-table-column prop="id" label="ID" width="180"></el-table-column>
         <el-table-column prop="name" label="名称" width="180"></el-table-column>
@@ -58,7 +59,7 @@
         },
         methods:{
             fetchData(){                 
-                axios.get(`/tb_brand/findpage?page=${this.currentPage4}&size=${this.size}`,this.searchMap).then(response=> {    
+                axios.get(`/tb_brand/findpage?page=${this.currentPage}&size=${this.size}`,this.searchMap).then(response=> {    
                     this.tableData = response.data.size;              
                     this.total = response.data.total;            
                 });                              
